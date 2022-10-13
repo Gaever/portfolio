@@ -1,0 +1,32 @@
+.nav-container {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  backdrop-filter: blur(30px);
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0,0,0,0.03);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-container {
+    border-bottom-color: rgba(255,255,255,0.03);
+  }  
+}
+
+.nav-container nav {
+  background-color: transparent;
+  @apply pl-0 pr-0;
+}
+
+.social {
+  @apply transition-all;
+}
+
+.social img {
+  filter: invert();
+}
+
+.social:hover {
+  @apply scale-110;
+}

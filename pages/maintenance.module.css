@@ -1,0 +1,4 @@
+.main {
+  min-height: 100vh;
+  @apply flex flex-col justify-center items-center;
+}

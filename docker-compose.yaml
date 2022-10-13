@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  landing:
+    build:
+      context: "./"
+    environment:
+      NODE_ENV: production
+      MAINTENANCE_MODE: '${MAINTENANCE_MODE:-0}'
+    volumes:
+      - "./:/app/src"
+    ports:
+      - "3000:3000"

@@ -1,0 +1,33 @@
+.container {
+	font-family: 'Noto Serif', serif;
+	@apply
+		text-4xl pb-5 p-3 text-left 
+		border-b-4 border-t-2 border-b-black
+		cursor-pointer w-full box-border
+		transition-all duration-200
+		bg-gradient-to-t from-white 
+
+		dark:from-black to-transparent
+		dark:border-b-white;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+
+.container:hover  {
+	/* border-top-color: black;
+	border-left-color: black;
+	border-right-color: black; */
+	/* border-left-color: black; */
+	/* border-right-color: black;	 */
+	
+	@apply pl-5 drop-shadow-xl bg-gradient-to-t border-l-slate-200 border-r-slate-200;
+	/* @apply border-t-slate-200; */
+	border-radius: 20px;
+}
+
+.container:active  {
+	/* @apply border-l-2 border-r-2; */
+	transform: scale(1.03);
+	border-radius: 0px;
+}

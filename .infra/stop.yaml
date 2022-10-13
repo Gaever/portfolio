@@ -1,0 +1,9 @@
+---
+- hosts: gaever
+  gather_facts: no
+  remote_user: gaever
+  tasks:
+    - name: Run docker-compose
+      shell:
+        cmd: "docker-compose down"
+        chdir: /home/gaever/portfolio

@@ -1,0 +1,17 @@
+---
+- hosts: gaever
+  gather_facts: no
+  remote_user: gaever
+  tasks:
+    - name: Create .env
+      shell:
+        chdir: /home/gaever/portfolio
+        cmd: >
+          rm -f /home/gaever/portfolio/.env &&
+          echo "
+          "
+          >> .env
+    - name: Run docker-compose
+      shell:
+        cmd: "docker-compose up -d"
+        chdir: /home/gaever/portfolio

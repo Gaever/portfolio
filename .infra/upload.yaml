@@ -1,0 +1,13 @@
+---
+- hosts: gaever
+  gather_facts: no
+  remote_user: gaever
+  tasks:
+    - name: Install required system packages
+      apt: name=rsync state=latest
+    - name: Upload src
+      synchronize:
+        src: "{{playbook_dir}}/../"
+        dest: "/home/gaever/portfolio"
+        delete: no
+        use_ssh_args: yes

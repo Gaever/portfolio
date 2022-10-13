@@ -1,0 +1,17 @@
+.title {
+  max-width: 560px;
+  @apply mt-10;
+}
+
+.description {
+  @apply
+  text-gray-500
+  bg-white dark:bg-black
+  bg-opacity-70 dark:bg-opacity-70
+  mt-6 pr-3 pt-3 pb-3 rounded-lg  text-justify;
+
+  line-height: 1.5;
+  font-size: 1.2rem;
+  backdrop-filter: blur(8px);
+  max-width: 660px;
+}

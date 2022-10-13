@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+}
+
+.balloonContainer {
+  position: absolute;
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+}
+
+.balloon {
+  position: relative;
+  width: 230px;
+  height: 270px;
+  border-radius: 1000px;
+}

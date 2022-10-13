@@ -1,0 +1,18 @@
+---
+- hosts: gaever
+  gather_facts: no
+  remote_user: gaever
+  tasks:
+    - name: yarn
+      shell:
+        chdir: /home/gaever/portfolio
+        cmd: "yarn"
+
+- hosts: gaever
+  gather_facts: no
+  remote_user: gaever
+  tasks:
+    - name: build
+      shell:
+        chdir: /home/gaever/portfolio
+        cmd: "yarn build"
